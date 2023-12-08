@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(207, 207, 207);
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.head {
+    background-color: rgba(67,40,28,255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    height: 100px;
+    box-shadow: 0px 5px 5px grey;
+}
+
+.page-content{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3px;
+    column-gap: 30px;
+    margin: 0 auto;
+    grid-template-areas: 
+    "cart customer-info"
+    "cart payment-info"
+    "order-amount order-amount"
+    "place-order place-order";
+}
+
+.box {
+    background-color: rgb(238,228,182);
+    box-shadow: 0px 2px 8px grey;
+    border-radius: 5px;
+    width: 100%;
+    margin: 20px;
+    margin-bottom: 2px;
+    padding: 15px;
+}
+
+.component-title {
+    color: #885a2d;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.company-logo {
+    height: 50px;
+    position: relative;
+}
+.company-title {
+    text-align: center;
+    
+    color: rgb(238,228,182)
+
+}
+
+.cart {
+    grid-area: cart; 
+}
+
+.cart-content{
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+.item{
+    display:grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas: 
+    "quantity item-name price"
+    "quantity option-list price";
+    box-shadow: 0px 1px rgb(140,116,92);
+    padding: 10px 0;
+    row-gap: 8px;
+}
+.item:last-child{
+    box-shadow: none;
+}
+
+.option-list{
+    grid-area: option-list;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    list-style: none;
+    color: rgb(140,116,92);
+}
+.option {
+    font-weight: 700;
+}
+.quantity {
+    grid-area: quantity;
+    font-weight: 800;
+}
+.price {
+    grid-area: price;
+    font-weight: bold;
+}
+.item-name {
+    grid-area: item-name;
+    font-weight: bold;
+}
+
+.customer-info {
+    grid-area: customer-info;
+    margin: 10px;
+}
+.payment-info {
+    grid-area: payment-info;
+}
+.payment-info-content {
+    display: flex;
+    flex-flow: column;
+}
+
+.input-group {
+    position: relative;
+    margin: 10px;
+}
+.user-input {
+    background-color: rgba(0,0,0,0);
+    border: 2px #885a2d solid;
+    padding: 8px;
+    border-radius: 100px;
+    width: 100%;
+    text-indent: 18px;
+    font-size: 18px;
+}
+
+.input-label {
+    color:#885a2d;
+    background-color: rgb(238,228,182);
+    font-size: 15px;
+    padding: 0 2px;
+    position: absolute;
+    top: -8px;
+    left: 20px;
+}
+
+.order-amount {
+    grid-area: order-amount;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.amount {
+    display: flex;
+    flex-direction: row;
+}
+.amount-type {
+    justify-content: left;
+    margin-right: 50px;
+}
+.amount-value {
+    justify-content: right;
+}
+.place-order{
+    align-self: center;
+}
+.order-button {
+    grid-area: place-order;
+    margin: 50px;
+    width:100%;
+    justify-content: center;
+}
+
