@@ -138,6 +138,10 @@ body {
     font-size: 18px;
 }
 
+.user-input.ccv {
+    width: 50%;
+}
+
 .input-label {
     color:#885a2d;
     background-color: rgb(238,228,182);
