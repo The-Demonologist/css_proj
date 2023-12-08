@@ -36,7 +36,7 @@ body {
     background-color: rgb(238,228,182);
     box-shadow: 0px 2px 8px grey;
     border-radius: 5px;
-    width: 100%;
+    width: 95%;
     margin: 20px;
     margin-bottom: 2px;
     padding: 15px;
@@ -54,13 +54,13 @@ body {
 }
 .company-title {
     text-align: center;
-    
     color: rgb(238,228,182)
 
 }
 
 .cart {
     grid-area: cart; 
+    margin-top:20px;
 }
 
 .cart-content{
@@ -110,6 +110,8 @@ body {
 .customer-info {
     grid-area: customer-info;
     margin: 10px;
+    margin-left: 0;
+    margin-right: 5px;
 }
 .payment-info {
     grid-area: payment-info;
@@ -143,7 +145,7 @@ body {
     left: 20px;
 }
 
-.order-amount {
+.order {
     grid-area: order-amount;
     height: 100px;
     width: 100%;
@@ -151,26 +153,42 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .amount {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas: 
+    "amount-type . amount-value"
+    "amount-type . amount-value"
+    "amount-type . amount-value"
+    "order-button order-button order-button";
     flex-direction: row;
+    width: 500px;
 }
 .amount-type {
-    justify-content: left;
-    margin-right: 50px;
+    grid-area: amount-type;
+    align-self: left;
 }
 .amount-value {
-    justify-content: right;
-}
-.place-order{
-    align-self: center;
+    grid-area:amount-value;
+    text-align: end;
 }
 .order-button {
     grid-area: place-order;
     margin: 50px;
-    width:100%;
+    width:75%;
     justify-content: center;
+    background-color: rgb(206, 173, 131);
+    border-radius: 50px;
+    border-style: none;
+    padding: 16px;
+    height: 50px;
+    justify-content: left;
+}
+.order-button:hover{
+    background-color: rgb(238,228,182);
+    border-style:solid;
+    border-color:#885a2d;
 }
 
